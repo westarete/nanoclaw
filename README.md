@@ -1,3 +1,13 @@
+This is [West Arete](https://westarete.com)’s public fork of [NanoClaw](https://github.com/qwibitai/nanoclaw). This is where we publish new NanoClaw skills and capabilities for the community. 
+
+Each skill is published as a branch in this repo, according to [NanoClaw's convention of "skills as branches"](https://github.com/qwibitai/nanoclaw/blob/main/docs/skills-as-branches.md):
+
+- [email](https://github.com/westarete/nanoclaw/blob/skill/email/.claude/skills/add-email/SKILL.md) - Adds various email capabilities to NanoClaw. Implemented with IMAP, so it works with just about any email service.
+
+The official NanoClaw README content follows below.
+
+---
+
 <p align="center">
   <img src="assets/nanoclaw-logo.png" alt="NanoClaw" width="400">
 </p>
