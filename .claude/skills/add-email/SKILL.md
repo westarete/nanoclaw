@@ -1,24 +1,25 @@
 ---
 name: add-email
-description: Add a generic IMAP/SMTP email channel to NanoClaw (West Arete fork — in development on skill/email). Full design in bundled docs; merge the skill branch when the implementation lands.
+description: Adds a generic IMAP/SMTP email channel to NanoClaw for email-native participation (threads + mailing lists). Use when implementing, installing, or discussing the `/add-email` skill (distinct from `/add-gmail`).
 ---
 
-# Add Email Channel (IMAP/SMTP)
+# `/add-email` (IMAP/SMTP) — Email channel skill
 
-This skill adds **generic email** as a NanoClaw channel — IMAP for inbound (ImapFlow), SMTP for outbound (Nodemailer) — distinct from **`/add-gmail`** (Gmail API + OAuth).
+This skill adds **generic email** as a NanoClaw channel: **IMAP** for inbound (ImapFlow) and **SMTP** for outbound (Nodemailer). It is **provider-agnostic** (works with any IMAP/SMTP server) and is **not** `/add-gmail` (Gmail API + OAuth). 
 
-**Status:** Planning and docs live in this directory alongside this file. Implementation is developed on **[`westarete/nanoclaw`](https://github.com/westarete/nanoclaw)** branch **`skill/email`** until merged upstream.
+It's designed to allow NanoClaw to participate in trusted email groups. 
 
-## Where to read
+## Status
 
-| Doc | Purpose |
-|-----|---------|
-| [README.md](README.md) | Index of fork/skill documentation |
-| [PLAN.md](PLAN.md) | Architecture, security model, ImapFlow/Nodemailer, threading, marketplace flow |
-| [DEVELOPMENT.md](DEVELOPMENT.md) | Fork vs upstream, branches, PRs |
-| [CLAUDE.md](CLAUDE.md) | Agent session context for this skill |
-| [security-principles.md](security-principles.md) | Security posture notes |
+Planning and development for the email channel lives on **`westarete/nanoclaw`** branch **`skill/email`** until merged upstream.
 
-## Apply (when implemented)
+## Caveats
 
-When the channel code exists on the fork, installation will follow the usual feature-skill pattern: merge **`westarete/skill/email`** (or **`upstream/skill/email`** after upstream accepts the PR), then configure IMAP/SMTP credentials via OneCLI and env. Exact steps will be expanded here as the implementation stabilizes.
+This skill is **not yet fully implemented** in upstream NanoClaw. When it lands, installation will follow the normal feature-skill pattern: merge the **`skill/email`** branch from the appropriate remote (West Arete fork initially, upstream later), then configure IMAP/SMTP credentials via OneCLI and env.
+
+## Development
+
+Read these files if you're working on development of `add-email` skill itself.
+
+- **Implementation plan**: [`PLAN.md`](PLAN.md) (phases, checklists, and email-specific security boundaries)
+- **Contributor workflow + principles**: [`DEVELOPMENT.md`](DEVELOPMENT.md) (fork/upstream flow, security mindset, and Skill authoring best practices)
